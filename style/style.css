@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b39898;
+    font-family: 'Oswald', sans-serif;
+}
+.main {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.formulario h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario input {
+    margin-right: 10px;
+}
+.formulario img {
+    width: 200px;
+    margin: 40px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.resultado {
+    display: flex;
+    flex-direction: column;
+    margin: 28px 0;
+    justify-content: space-around;
+    height: 200px;
+}

@@ -7,6 +7,8 @@ const episodios = document.querySelector('#episodios')
 const inputN = document.querySelector('#inputNome')
 const inputE = document.querySelector('#inputEpisodios')
 const inputG = document.querySelector('#inputGenero')
+const limpar = document.querySelector('#limpar')
+
 
 const fetchApi = (value) => {
     const result = fetch(`https://rickandmortyapi.com/api/character/${value}`)
@@ -43,3 +45,5 @@ botao.addEventListener('click', async (event) => {
     }
 
 });
+
+limpar.addEventListener('click', () => location.reload());

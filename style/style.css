@@ -20,19 +20,18 @@ body {
     
 }
 
-.formulario h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.formulario h1, h2 {
+    font-size: 16px;
     font-weight: 700;
 }
 
 .formulario label {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+   
 }
 
 .formulario input {
-    margin-right: 10px;
+    margin-bottom: 18px;
 }
 .formulario img {
     width: 200px;

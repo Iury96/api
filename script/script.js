@@ -9,6 +9,10 @@ const inputE = document.querySelector('#inputEpisodios')
 const inputG = document.querySelector('#inputGenero')
 const limpar = document.querySelector('#limpar')
 
+const generoTraducoes = {
+    "Male": "Masculino",
+    "Female": "Feminino",
+};
 
 const fetchApi = (value) => {
     const result = fetch(`https://rickandmortyapi.com/api/character/${value}`)
@@ -22,26 +26,34 @@ const fetchApi = (value) => {
 
 }
 
+const atualizado = (result) => {
+    img.src = result.image;
+
+    if (inputN.checked) {
+        nome.innerHTML = `Nome: ${result.name}`;
+    } else {
+        nome.innerHTML = '';
+    }
+
+    if (inputE.checked) {
+        episodios.innerHTML = `Episódios: ${result.episode.length}`;
+    } else {
+        episodios.innerHTML = '';
+    }
+
+    if (inputG.checked) {
+        const generoTraduzido = generoTraducoes[result.gender] || result.gender;
+        genero.innerHTML = `Gênero: ${generoTraduzido}`;
+    } else {
+        genero.innerHTML = '';
+    }
+};
+
 botao.addEventListener('click', async (event) => {
     event.preventDefault();
     const result = await fetchApi(entrada.value);
-
-    if (inputN.checked) {
-        img.src = `${result.image}`
-        nome.innerHTML = `Nome: ${result.name}`
-       
-    } else if (inputE.checked){
-        
-        img.src = `${result.image}`
-        episodios.innerHTML = `Episodios: ${result.episode}`
-    } else if (inputG.checked){
-        img.src = `${result.image}`
-        genero.innerHTML = `Gênero: ${result.gender}`
-    } else {
-        img.src = `${result.image}`
-        nome.innerHTML = `Nome: ${result.name}`
-        episodios.innerHTML = `Episodios: ${result.episode}`
-        genero.innerHTML = `Gênero: ${result.gender}`
+    if (result) {
+        atualizado(result);
     }
 
 });

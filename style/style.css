@@ -7,8 +7,11 @@
 }
 
 body {
-    background-color: #b39898;
+    background-image: url(../img/rick-y-morty-3245.jpg);
     font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    background-size: cover;
+
 }
 .main {
     width: 900px;
@@ -35,6 +38,7 @@ body {
 .formulario img {
     width: 400px;
     margin: 20px 0;
+    border-radius: 20px;
 }
 
 button {

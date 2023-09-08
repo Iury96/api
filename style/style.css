@@ -71,5 +71,9 @@ button:hover {
     justify-content: space-around;
     word-wrap: break-word; 
     max-height: 600px;   
+    
+}
+.resultado p {
+    font-size: 28px;
     color: rgb(244, 201, 201);
 }
